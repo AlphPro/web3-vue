@@ -1,0 +1,47 @@
+{
+  "name": "@alphpro/web3-vue",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/web3-vue.umd.js",
+  "module": "./dist/web3-vue.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/web3-vue.es.js",
+      "require": "./dist/web3-vue.umd.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alphpro/web3-vue"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "preserve": "vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview",
+    "test": "exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.0",
+    "@types/node": "^20.11.25",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-css-injected-by-js": "^3.4.0",
+    "vue-tsc": "^1.8.27"
+  },
+  "peerDependencies": {
+    "@alephium/get-extension-wallet": "^0.36.1",
+    "@alephium/walletconnect-provider": "^0.36.1",
+    "@alephium/walletconnect-qrcode-modal": "^0.1.0",
+    "@alephium/web3": "^0.36.1",
+    "vue": "^3.4.19"
+  }
+}
