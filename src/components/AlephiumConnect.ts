@@ -21,8 +21,8 @@ export default defineComponent({
     );
 
     const connectExtension = () => alephium.connection.connect("injected");
-    const connectMobile = () => alephium.connection.connect("desktopWallet");
-    const connectDesktop = () => alephium.connection.connect("mobileWallet");
+    const connectMobile = () => alephium.connection.connect("mobileWallet");
+    const connectDesktop = () => alephium.connection.connect("desktopWallet");
     const connectWalletConnect = () =>
       alephium.connection.connect("walletConnect");
     return () =>
