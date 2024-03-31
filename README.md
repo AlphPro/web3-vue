@@ -50,7 +50,7 @@ Alephium Provider should be placed on the furthest edge of your app that you wil
 
 ```html
 <template>
-  <AlephiumConnectionProvider :autoconnect="true" :group="0" network="mainnet">
+  <AlephiumConnectionProvider :autoConnect="true" :group="0" network="mainnet">
     <!-- Your App -->
   </AlephiumConnectionProvider>
 </template>
