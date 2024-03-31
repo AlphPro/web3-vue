@@ -166,3 +166,14 @@ const { getProvider } = useProvider();
 1. Balances will be fetched automatically on connection, and refreshed after every successful transaction. Generally you shouldn't need to manually fetch balances, however in some scenarios it may be desired and can be done by simply calling `fetchBalances` from `useAccount()`
 
 2. access to the reactive `provider` is available from `useProvider()` however due to management of vue internals, in some cases this will cause issues. The solution is to call the `getProvider()` getter on demand when needed, and this will return the users untouched provider which you can sign transactions manually for example.
+
+### Buffer is not defined
+Install Buffer
+```sh
+bun add buffer
+```
+Add it to your index.html
+```ts
+import { Buffer } from "buffer";
+window.Buffer = Buffer;
+```
